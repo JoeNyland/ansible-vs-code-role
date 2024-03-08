@@ -1,0 +1,10 @@
+---
+- name: Install VS Code
+  become: true
+  tags:
+    - vs_code
+    - code
+  block:
+    - name: Install
+      apt:
+        deb: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
